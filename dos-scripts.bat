@@ -1,4 +1,4 @@
-:: Windows Batch Files
+:: Windows Batch Files (source : http://notes.tomcarlson.com/windows-batch)
 :: Useful variables
 %0 - the command used to call the batch file (could be foo, ..\foo, c:\bats\foo, etc.)
 %1 is the first command line parameter,
