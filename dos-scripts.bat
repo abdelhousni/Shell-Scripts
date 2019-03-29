@@ -8,5 +8,5 @@ and so on till %9 (and SHIFT can be used for those after the 9th).
 %~dp0 - drive and path to the script (d:\scripts)
 %~dpnx0 - is the fully qualified path name of the script (d:\scripts\some-batch.bat)
 %cmdcmdline% - exact command line used to start the current Cmd.exe
-When launched from a command console, this var is "%SystemRoot%\system32.cmd.exe"
-When launched from explorer this var is cmd /c ""[d:\path\script.bat]" "
+:: When launched from a command console, this var is "%SystemRoot%\system32.cmd.exe"
+:: When launched from explorer this var is cmd /c ""[d:\path\script.bat]" "
