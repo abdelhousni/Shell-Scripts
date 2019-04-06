@@ -3,6 +3,7 @@
 # format : yyyy-mm-dd timestamp path
 find /var/lib/dpkg/info/ -name *.list -exec stat -c $'%y\t %n' {} \;
 
+
 # List installaed packages by installation date
 # source : https://unix.stackexchange.com/questions/12578/list-packages-on-an-apt-based-system-by-installation-date
 
