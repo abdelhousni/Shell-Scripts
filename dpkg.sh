@@ -23,3 +23,32 @@ $ join -1 1 -2 1 -t $'\t' ~/dpkglist.selections ~/dpkglist.dates \
 # Methode 2
 $ zgrep 'install ' /var/log/dpkg.log.1 | sort | cut -f1,2,4 -d' '
 
+#-------
+# source : http://la-vache-libre.org/aide-memoire-terminal-dpkg-debian-package/
+# Aide-mémoire Terminal : DPKG (Debian Package)
+
+# installation de paquet
+sudo dpkg -i paquet.deb
+
+# installation récursive
+sudo dpkg -i -R *.deb
+
+# Compléter l’installation d’un paquet qui nécessite des dépendances non satisfaites :
+sudo apt install -f
+# Reconfiguration de dpkg et pour faire simple, des paquets cassés.
+sudo dpkg --configure -a 
+
+# suppression de paquet
+sudo dpkg -r paquet.deb
+
+# suppression d'un paquet et des fichiers associés
+sudo dpkg -P paquet.deb
+
+# commande dangereuse, mais parfois utile
+sudo dpkg --force-all --purge [paquet.deb]
+
+# lister les paquets installés
+dpkg -l [*paquet*]
+
+# lister les paquets contenant le fichier recherché
+dpkg -S [fichier]
