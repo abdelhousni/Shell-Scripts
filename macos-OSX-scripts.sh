@@ -1,5 +1,4 @@
-# exemples de scripts utiles pour macos-OSX
-
+#scripts utiles pour macos-OSX
 
 # Activer bash-completion
 # source : https://www.simplified.guide/macos/bash-completion
@@ -9,6 +8,3 @@ sudo launchctl list
 
 # stop service
 sudo launchctl stop service
-
-
-
