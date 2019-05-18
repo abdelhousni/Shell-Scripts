@@ -1,5 +1,9 @@
-# La référence : https://debian-handbook.info/browse/fr-FR/stable/sect.manipulating-packages-with-dpkg.html
+# but : dpkg > CSV
+#source : https://askubuntu.com/questions/538261/how-to-tweak-dpkg-l-output
+dpkg-query -Wl -f='${binary:Package};${Version};${Architecture};${binary:Summary}\n'
 
+
+# La référence : https://debian-handbook.info/browse/fr-FR/stable/sect.manipulating-packages-with-dpkg.html
 # History of all installed packages
 # source : https://askubuntu.com/questions/680410/how-to-view-history-of-apt-get-install
 # format : yyyy-mm-dd timestamp path
