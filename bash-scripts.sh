@@ -1,4 +1,7 @@
-# 
+# find all file extensions recursively from a directory
+# source : https://stackoverflow.com/questions/4998290/how-to-find-all-file-extensions-recursively-from-a-directory
+ls -R | egrep  '(\.\w+)$' -o | sort | uniq -c | sort -r
+
 
 # remove files (in current path) with size 0
 find . -size 0 -delete
