@@ -13,3 +13,7 @@ ls /source/path/*pattern* | xargs -I{} cp -u {} /destination/path
 # download all folder files (source forge)
 # source : https://stackoverflow.com/questions/39668291/download-whole-folder-from-sourceforge
 curl https://sourceforge.net/projects/broll/rss?path=/dicts-babylon/001 | grep "<link>.*</link>" | sed 's|<link>||;s|</link>||' | while read url; do url=`echo $url | sed 's|/download$||'`; wget $url ; done
+
+# Add timestamp to history
+vi ~/.bashrc
+export HISTTIMEFORMAT="%F %T "
