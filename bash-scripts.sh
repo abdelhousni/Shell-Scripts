@@ -17,3 +17,15 @@ curl https://sourceforge.net/projects/broll/rss?path=/dicts-babylon/001 | grep "
 # Add timestamp to history
 vi ~/.bashrc
 export HISTTIMEFORMAT="%F %T "
+
+
+# Extract first number from list of files & move corresponding file to folder
+# source : https://stackoverflow.com/questions/5811753/extract-the-first-number-from-a-string
+# extract list of numbers
+list=$(ls *.mp4 -1 | sed -r 's/^([^.]+).*$/\1/; s/^[^0-9]*([0-9]+).*$/\1/')
+for i in $list
+do
+	echo module$i* \>\> Module\ $i*
+	# move files to corresponding folder
+  mv module$i* Module\ $i*
+done
