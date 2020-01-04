@@ -59,3 +59,10 @@ dpkg -l [*paquet*]
 # lister les paquets contenant le fichier recherché
 dpkg -S [fichier]
 
+# list all <package> files
+dpkg -L <package>
+
+# list all <package.deb> files
+dpkg -c <package.deb>
+
+
