@@ -29,3 +29,7 @@ do
 	# move files to corresponding folder
   mv module$i* Module\ $i*
 done
+
+# Download urls from filelist with get in parallel
+apt install parallel
+cat urlfile | parallel --gnu "wget {}"
