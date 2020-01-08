@@ -31,5 +31,6 @@ do
 done
 
 # Download urls from filelist with get in parallel
+# source : https://askubuntu.com/questions/103623/download-files-from-a-list
 apt install parallel
 cat urlfile | parallel --gnu "wget {}"
