@@ -70,21 +70,21 @@ dpkg -c <package.deb>
 # There are four ways of holding back packages: with dpkg, apt, aptitude or dselect.
 
 # dpkg
-#Put a package on hold:
+# Put a package on hold:
 echo "<package-name> hold" | sudo dpkg --set-selections
-#Remove the hold:
+# Remove the hold:
 echo "<package-name> install" | sudo dpkg --set-selections
-#Display the status of your packages:
+# Display the status of your packages:
 dpkg --get-selections
-#Display the status of a single package:
+# Display the status of a single package:
 dpkg --get-selections | grep "<package-name>"
 
-#apt
-#Hold a package:
+# apt
+# Hold a package:
 sudo apt-mark hold <package-name>
-#Remove the hold:
+# Remove the hold:
 sudo apt-mark unhold <package-name>
-#Show all packages on hold:
+# Show all packages on hold:
 sudo apt-mark showhold
 
 # dselect
@@ -94,10 +94,10 @@ sudo apt-mark showhold
 # aptitude
 # Hold a package:
 sudo aptitude hold <package-name>
-#Remove the hold:
+# Remove the hold:
 sudo aptitude unhold <package-name>
 
 # Locking with Synaptic Package Manager
 # Go to Synaptic Package Manager (System > Administration > Synaptic Package Manager).
-#Click the search button and type the package name.
-#When you find the package, select it and go to the Package menu and select Lock Version.
+# Click the search button and type the package name.
+# When you find the package, select it and go to the Package menu and select Lock Version.
