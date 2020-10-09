@@ -4,7 +4,7 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - lsb_release -a
+      - run: lsb_release -a
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: npm install -g bats
