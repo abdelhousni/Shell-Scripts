@@ -34,3 +34,7 @@ done
 # source : https://askubuntu.com/questions/103623/download-files-from-a-list
 apt install parallel
 cat urlfile | parallel --gnu "wget {}"
+
+# copy file creating any missing intermediate directories
+# for /opt/foo/foo-file
+$ cp --parents foo-file ./current-folder
