@@ -38,3 +38,11 @@ cat urlfile | parallel --gnu "wget {}"
 # copy file creating any missing intermediate directories
 # for /opt/foo/foo-file
 $ cp --parents foo-file ./current-folder
+
+# syntax colored less
+# source : https://news.ycombinator.com/item?id=21363121
+## install python3-pygments
+## define function cless() with chosen <style> between ['default', 'emacs', 'friendly', 'colorful']
+cless() {
+pygmentize -O style=<style> "$1" 2>/dev/null | less
+}
